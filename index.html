@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TaskFlow - A beautiful and modern to-do list application to organize your tasks efficiently">
+    <meta name="keywords" content="todo, task manager, productivity, task list, to-do app">
+    <meta name="author" content="Shivankush Singh">
+    <title>TaskFlow - Modern To-Do List</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+    <div class="animated-background"></div>
+
+    <div class="container">
+        <div class="app-container">
+            <!-- Header Section -->
+            <header class="app-header">
+                <div class="header-content">
+                    <h1 class="app-title">
+                        <i class="fas fa-check-circle"></i>
+                        TaskFlow
+                    </h1>
+                    <p class="app-subtitle">Organize your life, one task at a time</p>
+                </div>
+
+                <!-- Statistics Dashboard -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-icon total">
+                            <i class="fas fa-list"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Total</span>
+                            <span class="stat-value" id="total-tasks">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon active">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Active</span>
+                            <span class="stat-value" id="active-tasks">0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon completed">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-label">Completed</span>
+                            <span class="stat-value" id="completed-tasks">0</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Task Input Section -->
+            <div class="task-input-section">
+                <div class="input-wrapper">
+                    <input type="text" id="task-input" class="task-input" placeholder="What needs to be done?"
+                        autocomplete="off">
+                    <button id="add-task-btn" class="add-task-btn" title="Add Task">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" id="filter-all" data-filter="all">
+                    <i class="fas fa-list"></i>
+                    All
+                </button>
+                <button class="filter-tab" id="filter-active" data-filter="active">
+                    <i class="fas fa-clock"></i>
+                    Active
+                </button>
+                <button class="filter-tab" id="filter-completed" data-filter="completed">
+                    <i class="fas fa-check-circle"></i>
+                    Completed
+                </button>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list-container">
+                <ul id="task-list" class="task-list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+                <div id="empty-state" class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet. Add one to get started!</p>
+                </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="footer-actions">
+                <button id="clear-completed-btn" class="clear-completed-btn">
+                    <i class="fas fa-trash-alt"></i>
+                    Clear Completed
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
