@@ -1,0 +1,250 @@
+:root {
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --text-color: #ffffff;
+    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    background-color: #0f0c29;
+    overflow-x: hidden;
+}
+
+/* Dynamic Background */
+.background-animate {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: white;
+    width: 100%;
+    max-width: 500px;
+}
+
+.app-title {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Group */
+.search-box input {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    backdrop-filter: blur(5px);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px 0 0 30px !important;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow: none;
+}
+
+.btn-add {
+    border-radius: 0 30px 30px 0 !important;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    transition: transform 0.2s;
+}
+
+.btn-add:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #5b0eb0 0%, #1e63d3 100%);
+}
+
+/* Navigation Pills */
+.nav-pills .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.nav-pills .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Task List */
+.task-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.task-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease forwards;
+    border: 1px solid transparent;
+}
+
+.task-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.task-text {
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 10px;
+    word-break: break-all;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    color: #ff6b6b;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.custom-checkbox::before {
+    content: "";
+    width: 0.75em;
+    height: 0.75em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.custom-checkbox:checked::before {
+    transform: scale(1);
+}
+
+.custom-checkbox:checked {
+    background-color: #00d2ff;
+    border-color: #00d2ff;
+}
+
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-out {
+    animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
+/* Footer */
+#clearCompletedBtn:hover {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #ff6b6b;
+}
