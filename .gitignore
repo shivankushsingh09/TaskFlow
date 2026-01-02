@@ -1,0 +1,385 @@
+# ============================================
+# TaskFlow - Git Ignore File
+# ============================================
+
+# ============================================
+# IDE and Editor Specific Files
+# ============================================
+
+# Visual Studio Code
+.vscode/
+.vscode-server/
+.code-workspace
+*.code-workspace
+.history/
+.vscode-insiders/
+
+# IntelliJ IDEA / WebStorm / PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+.atomrc
+
+# VS
+.vs/
+.vsx/
+
+# Vim
+.vim/
+*.swp
+*.swo
+*~
+.vimrc
+.netrwhist
+
+# Emacs
+*~
+*.elc
+.#*
+
+# Nano
+.nano_history
+
+# Other Editors
+*.sw[a-z]
+*.bak
+*.tmp
+*.orig
+
+# ============================================
+# Operating System Files
+# ============================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.exe
+*.bat
+*.cmd
+*.com
+
+# Linux
+.nfs*
+.directory
+
+# ============================================
+# Node.js & Package Managers
+# ============================================
+
+# npm
+node_modules/
+npm-debug.log
+npm-error.log
+package-lock.json
+yarn.lock
+.npm/
+.pnpm-lock.yaml
+pnpm-lock.yaml
+
+# yarn
+.yarn/
+.yarnrc.yml
+
+# Lerna
+lerna-debug.log
+
+# .env files
+.env
+.env.local
+.env.*.local
+.env.*.example
+
+# ============================================
+# Build Directories and Artifacts
+# ============================================
+
+# Build outputs
+dist/
+build/
+out/
+.cache/
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.vuepress/dist
+
+# Production build
+production/
+release/
+*.min.js
+*.min.css
+*.min.html
+
+# ============================================
+# Testing & Coverage
+# ============================================
+
+# Test coverage reports
+coverage/
+.nyc_output/
+*.lcov
+.coverage
+htmlcov/
+
+# Testing frameworks
+test-results/
+.mocha/
+.jest/
+
+# ============================================
+# Temporary Files
+# ============================================
+
+# OS temporary files
+*.tmp
+*.temp
+*.tempjs
+*.temphtml
+*.tempcss
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Lock files (optional - comment out if needed)
+# yarn.lock
+# package-lock.json
+
+# ============================================
+# Project Specific Files
+# ============================================
+
+# Local development database
+*.db
+*.sqlite
+*.sqlite3
+local.json
+local.config.js
+
+# API Keys and Secrets
+secrets.json
+.secrets
+.credentials
+.api_keys
+
+# ============================================
+# Browser & Local Storage
+# ============================================
+
+# Browser cache
+.browsersync*
+.cache/
+.parcel-cache/
+.browserlist*
+
+# Local storage exports (optional - uncomment if not needed)
+# *.export.json
+
+# ============================================
+# Documentation Generated Files
+# ============================================
+
+# JSDoc
+docs/generated/
+api-docs/
+jsdoc/
+
+# PDF files (optional)
+# *.pdf
+
+# ============================================
+# Logging
+# ============================================
+
+# Log files
+*.log
+logs/
+*.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ============================================
+# Docker
+# ============================================
+
+.docker/
+docker-compose.override.yml
+
+# ============================================
+# CI/CD
+# ============================================
+
+# GitHub Actions
+.github/workflows/tmp/
+
+# Travis CI
+.travis/
+
+# ============================================
+# OS Specific Folders
+# ============================================
+
+# Recycle Bin
+$RECYCLE.BIN/
+
+# System Volume Information
+System Volume Information/
+
+# ============================================
+# Photography/Media (if applicable)
+# ============================================
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.gif
+*.psd
+*.ai
+*.sketch
+
+# ============================================
+# Archive Files
+# ============================================
+
+# Compressed files
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tgz
+
+# ============================================
+# Configuration File Backups
+# ============================================
+
+*.config.bak
+*.config.backup
+*.settings.bak
+
+# ============================================
+# IDE Configuration Directories
+# ============================================
+
+# Android Studio
+.gradle
+.Android
+gradle/
+gradlew
+gradlew.bat
+
+# XCode
+xcuserdata/
+*.xcworkspace
+*.xcodeproj
+
+# ============================================
+# Python Related
+# ============================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ============================================
+# Project Excludes (customize as needed)
+# ============================================
+
+# Sensitive files
+config.local.js
+settings.local.js
+credentials.json
+private_keys.pem
+
+# ============================================
+# Development Tools
+# ============================================
+
+# Sass cache
+.sass-cache/
+*.css.map
+
+# Less cache
+.less-cache/
+
+# TypeScript
+*.tsbuildinfo
+dist/
+
+# ============================================
+# Archives and Backups (DO NOT COMMIT)
+# ============================================
+
+# Backup of entire project
+TaskFlow.backup/
+TaskFlow.zip
+TaskFlow.tar.gz
+
+# ============================================
+# Generated Files (DO NOT COMMIT)
+# ============================================
+
+# Auto-generated files
+dist/
+build/
+*.gen.js
+*.gen.css
+
+# ============================================
+# Comments:
+# - Remove or modify as per project requirements
+# - Uncomment lines that are relevant to your project
+# - Add new patterns as your project grows
+# ============================================
