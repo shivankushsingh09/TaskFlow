@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Manage Your Tasks Efficiently</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <!-- App Card -->
+                <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                    <div class="card-header bg-primary bg-gradient text-white p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="h3 mb-0 fw-bold"><i class="bi bi-check2-all me-2"></i>TaskFlow</h1>
+                            <span id="taskCount" class="badge bg-white text-primary rounded-pill">0 Tasks</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- Add Task Input -->
+                        <form id="todoForm" class="mb-4">
+                            <div class="input-group">
+                                <input type="text" id="todoInput"
+                                    class="form-control form-control-lg border-0 bg-light rounded-start-3"
+                                    placeholder="Add a new task..." aria-label="New task">
+                                <button class="btn btn-primary px-4 rounded-end-3" type="submit" id="addBtn">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Filters -->
+                        <div class="d-flex gap-2 mb-4 overflow-x-auto pb-2" id="filters">
+                            <button class="btn btn-sm btn-outline-primary active filter-btn"
+                                data-filter="all">All</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn"
+                                data-filter="pending">Pending</button>
+                            <button class="btn btn-sm btn-outline-primary filter-btn"
+                                data-filter="completed">Completed</button>
+                        </div>
+
+                        <!-- Task List -->
+                        <ul class="list-group list-group-flush" id="todoList">
+                            <!-- Tasks will be injected here -->
+                            <li
+                                class="list-group-item d-flex justify-content-center align-items-center py-5 text-muted empty-state">
+                                <div class="text-center">
+                                    <i class="bi bi-clipboard2-check display-1 mb-3 opacity-50"></i>
+                                    <p class="mb-0">Your task list is empty!</p>
+                                    <small>Add something above to get started.</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light p-3 border-0 text-center">
+                        <button id="clearCompleted" class="btn btn-link btn-sm text-decoration-none text-muted">
+                            <i class="bi bi-trash-fill me-1"></i>Clear Completed
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
